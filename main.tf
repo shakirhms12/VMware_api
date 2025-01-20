@@ -1,11 +1,3 @@
-provider "vsphere" {
-  user                 = "administrator@vsphere.local"
-  password             = "Admin@123"
-  vsphere_server       = var.vcenter_ip
-  allow_unverified_ssl = true
-  api_timeout          = 60 
-}
-
 data "http" "get_session" {
   url    = "https://${var.vcenter_ip}/rest/com/vmware/cis/session"
   method = "POST"
