@@ -3,6 +3,7 @@ provider "vsphere" {
   password             = "Admin@123"
   vsphere_server       = var.vcenter_ip
   allow_unverified_ssl = true
+  api_timeout          = 60 
 }
 
 data "http" "get_session" {
